@@ -8,19 +8,22 @@ import base64
 class ItineraryRequest(Document):
     pass
 
-def process_itinerary_request(doc):
-    try:
-        payload = {
-            "location": doc.location,
-            "days": doc.number_of_days,
-            "start_date": doc.start_date,
-            "travel_mode": doc.travel_mode,
-            "interests": doc.interests,
-            "budget": doc.budget_range,
-            "accommodation": doc.accommodation_type,
-            "email": doc.email
-        }
+@frappe.whitelist()
+def process_itinerary_request(docname):
+    doc = frappe.get_doc("Itinerary Request", docname)
+    
+    payload = {
+        "location": doc.location,
+        "days": doc.number_of_days,
+        "start_date": doc.start_date,
+        "travel_mode": doc.travel_mode,
+        "interests": doc.interests,
+        "budget": doc.budget_range,
+        "accommodation": doc.accommodation_type,
+        "email": doc.email
+    }
 
+    try:
         response = requests.post("http://ai-server/api/generate-itinerary", json=payload)
 
         if response.status_code == 200:
@@ -34,7 +37,7 @@ def process_itinerary_request(doc):
         else:
             doc.status = "Failed"
             doc.save(ignore_permissions=True)
-    except Exception as e:
+    except Exception:
         frappe.log_error(frappe.get_traceback(), "ItineraryRequestError")
         doc.status = "Failed"
         doc.save(ignore_permissions=True)
