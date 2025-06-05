@@ -1,0 +1,23 @@
+{
+  "doctype": "DocType",
+  "name": "Itinerary Request",
+  "module": "Travel Itinerary",
+  "autoname": "field:location",
+  "fields": [
+    {"fieldname": "location", "fieldtype": "Data", "label": "Location"},
+    {"fieldname": "number_of_days", "fieldtype": "Int", "label": "Number of Days"},
+    {"fieldname": "start_date", "fieldtype": "Date", "label": "Start Date"},
+    {"fieldname": "travel_mode", "fieldtype": "Select", "label": "Travel Mode", "options": "Flight\nTrain\nCar\nBus"},
+    {"fieldname": "interests", "fieldtype": "MultiSelect", "label": "Interests", "options": "Sightseeing\nAdventure\nFood\nCulture\nNature"},
+    {"fieldname": "budget_range", "fieldtype": "Select", "label": "Budget", "options": "Low\nMedium\nHigh"},
+    {"fieldname": "accommodation_type", "fieldtype": "Select", "label": "Accommodation", "options": "Hotel\nHostel\nAirbnb\nResort"},
+    {"fieldname": "email", "fieldtype": "Data", "label": "Email", "options": "Email"},
+    {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Pending\nProcessing\nComplete\nFailed"},
+    {"fieldname": "pdf_file", "fieldtype": "Link", "label": "PDF File", "options": "File"},
+    {"fieldname": "request_time", "fieldtype": "Datetime", "label": "Request Time"},
+    {"fieldname": "response_time", "fieldtype": "Datetime", "label": "Response Time"}
+  ],
+  "permissions": [
+    {"role": "System Manager", "read": 1, "write": 1, "create": 1}
+  ]
+}
