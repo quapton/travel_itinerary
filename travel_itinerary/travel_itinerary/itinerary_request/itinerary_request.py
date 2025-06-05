@@ -1,15 +1,12 @@
+# itinerary_request.py
 import frappe
 import requests
 from frappe.model.document import Document
-from frappe.utils import now
+from frappe.utils import now_datetime
 import base64
 
 class ItineraryRequest(Document):
-    def before_save(self):
-        if not self.status or self.status == "Pending":
-            self.status = "Processing"
-            self.request_time = now()
-            frappe.enqueue(process_itinerary_request, doc=self)
+    pass
 
 def process_itinerary_request(doc):
     try:
@@ -23,23 +20,24 @@ def process_itinerary_request(doc):
             "accommodation": doc.accommodation_type,
             "email": doc.email
         }
+
         response = requests.post("http://ai-server/api/generate-itinerary", json=payload)
 
         if response.status_code == 200:
-            filename = f"Itinerary_{doc.location}_{frappe.utils.now_datetime().strftime('%Y%m%d_%H%M%S')}.pdf"
+            filename = f"Itinerary_{doc.location}_{now_datetime().strftime('%Y%m%d_%H%M%S')}.pdf"
             file_url = save_pdf_to_file(response.content, filename, doc.name)
 
             doc.pdf_file = file_url
             doc.status = "Complete"
-            doc.response_time = now()
-            doc.save()
+            doc.response_time = now_datetime()
+            doc.save(ignore_permissions=True)
         else:
             doc.status = "Failed"
-            doc.save()
+            doc.save(ignore_permissions=True)
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "ItineraryRequestError")
         doc.status = "Failed"
-        doc.save()
+        doc.save(ignore_permissions=True)
 
 def save_pdf_to_file(pdf_bytes, filename, attached_to):
     file_doc = frappe.get_doc({
