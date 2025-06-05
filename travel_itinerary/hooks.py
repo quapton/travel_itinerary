@@ -1,5 +1,5 @@
 app_name = "travel_itinerary"
-app_title = "Quapton Travel Itinerary"
+app_title = "Travel Itinerary"
 app_publisher = "partners@quapton"
 app_description = "a tool that simplifies the process of creating detailed and organized travel plans"
 app_email = "partners@quapton.com"
@@ -17,7 +17,7 @@ doctype_js = {
 # 	{
 # 		"name": "travel_itinerary",
 # 		"logo": "/assets/travel_itinerary/logo.png",
-# 		"title": "Quapton Travel Itinerary",
+# 		"title": "Travel Itinerary",
 # 		"route": "/travel_itinerary",
 # 		"has_permission": "travel_itinerary.api.permission.has_app_permission"
 # 	}

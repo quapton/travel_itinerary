@@ -1,4 +1,4 @@
-### Quapton Travel Itinerary
+### Travel Itinerary
 
 a tool that simplifies the process of creating detailed and organized travel plans
 
