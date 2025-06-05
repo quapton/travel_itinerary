@@ -7,14 +7,6 @@ def get_data():
             "label": _("Travel Tools"),
             "icon": "fa fa-map",
             "type": "module",
-            "color": "blue",
-            "items": [
-                {
-                    "type": "doctype",
-                    "name": "Itinerary Request",
-                    "label": _("Itinerary Request"),
-                    "description": _("Submit a travel plan request."),
-                }
-            ]
+            "color": "blue"
         }
     ]
