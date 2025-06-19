@@ -4,7 +4,9 @@ app_publisher = "partners@quapton"
 app_description = "a tool that simplifies the process of creating detailed and organized travel plans"
 app_email = "partners@quapton.com"
 app_license = "mit"
-
+app_icon_url = "/assets/travel_itinerary/images/flight.png"
+app_icon_title = "Travel Itinerary"
+app_icon_route = "/tśravel_itinerary"
 # Apps
 # ------------------
 doctype_js = {
@@ -13,20 +15,22 @@ doctype_js = {
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "travel_itinerary",
-# 		"logo": "/assets/travel_itinerary/logo.png",
-# 		"title": "Travel Itinerary",
-# 		"route": "/travel_itinerary",
-# 		"has_permission": "travel_itinerary.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "travel_itinerary",
+		"logo": "/assets/travel_itinerary/images/flight.png",
+		"title": "Travel Itinerary",
+		"route": "/travel_itinerary",
+		"has_permission": "travel_itinerary.api.permission.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
+app_include_css = "/assets/travel_itinerary/css/custom_font.css"
+
 # app_include_css = "/assets/travel_itinerary/css/travel_itinerary.css"
 # app_include_js = "/assets/travel_itinerary/js/travel_itinerary.js"
 
