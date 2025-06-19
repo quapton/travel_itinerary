@@ -6,7 +6,7 @@ app_email = "partners@quapton.com"
 app_license = "mit"
 app_icon_url = "/assets/travel_itinerary/images/flight.png"
 app_icon_title = "Travel Itinerary"
-app_icon_route = "/tśravel_itinerary"
+app_icon_route = "/travel_itinerary"
 # Apps
 # ------------------
 doctype_js = {
@@ -248,3 +248,58 @@ app_include_css = "/assets/travel_itinerary/css/custom_font.css"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+standard_dropdown_items = [
+	{
+		"name1": "app_selector",
+		"label": "Apps",
+		"type": "Route",
+		"route": "#",
+		"is_standard": 1,
+	},
+	{
+		"name1": "toggle_theme",
+		"label": "Toggle theme",
+		"type": "Route",
+		"icon": "moon",
+		"route": "#",
+		"is_standard": 1,
+	},
+	{
+		"name1": "settings",
+		"label": "Settings",
+		"type": "Route",
+		"icon": "settings",
+		"route": "#",
+		"is_standard": 1,
+	},
+	{
+		"name1": "login_to_fc",
+		"label": "Login to Frappe Cloud",
+		"type": "Route",
+		"route": "#",
+		"is_standard": 1,
+	},
+	{
+		"name1": "about",
+		"label": "About",
+		"type": "Route",
+		"icon": "info",
+		"route": "#",
+		"is_standard": 1,
+	},
+	{
+		"name1": "separator",
+		"label": "",
+		"type": "Separator",
+		"is_standard": 1,
+	},
+	{
+		"name1": "logout",
+		"label": "Log out",
+		"type": "Route",
+		"icon": "log-out",
+		"route": "#",
+		"is_standard": 1,
+	},
+]
