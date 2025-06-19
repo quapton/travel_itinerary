@@ -21,7 +21,7 @@ add_to_apps_screen = [
 		"logo": "/assets/travel_itinerary/images/flight.png",
 		"title": "Travel Itinerary",
 		"route": "/travel_itinerary",
-		"has_permission": "travel_itinerary.api.permission.has_app_permission"
+		# "has_permission": "travel_itinerary.api.permission.has_app_permission"
 	}
 ]
 
