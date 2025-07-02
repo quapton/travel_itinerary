@@ -15,15 +15,15 @@ doctype_js = {
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-add_to_apps_screen = [
-	{
-		"name": "travel_itinerary",
-		"logo": "/assets/travel_itinerary/images/flight.png",
-		"title": "Travel Itinerary",
-		"route": "/travel_itinerary",
-		# "has_permission": "travel_itinerary.api.permission.has_app_permission"
-	}
-]
+# add_to_apps_screen = [
+# 	{
+# 		"name": "travel_itinerary",
+# 		"logo": "/assets/travel_itinerary/images/flight.png",
+# 		"title": "Travel Itinerary",
+# 		"route": "/travel_itinerary",
+# 		# "has_permission": "travel_itinerary.api.permission.has_app_permission"
+# 	}
+# ]
 
 # Includes in <head>
 # ------------------
