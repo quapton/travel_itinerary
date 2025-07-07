@@ -5,8 +5,8 @@ body, html, * {
 }
 
 /* Typography for headers */
-h1, h2, .modal-title {
-    font-weight: 600 !important;
+h1, h2,h3,h4,h5,h6 .modal-title {
+    font-weight: 700 !important;
     color: #0052CC;
 }
 
@@ -14,7 +14,7 @@ h1, h2, .modal-title {
 /* Sidebar */
 .layout-side-section,
 .standard-sidebar {
-    background-color: #f3f0ff !important;
+    background-color: #ffffff !important;
 }
 .standard-sidebar .sidebar-section {
    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
