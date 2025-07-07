@@ -1,13 +1,13 @@
-/* Set your desired font globally, e.g., Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 
 body, html, * {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Typography for headers */
-h1, h2, h3, h4, h5, h6, .modal-title {
+h1, h2, .modal-title {
     font-weight: 600 !important;
+    color: #0052CC;
 }
 
 
@@ -17,14 +17,15 @@ h1, h2, h3, h4, h5, h6, .modal-title {
     background-color: #f3f0ff !important;
 }
 .standard-sidebar .sidebar-section {
-    font-family: 'Poppins', sans-serif !important;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Desk / Module Icons */
-.module-icon {
-    color: #d886fc !important;
+/* .module-icon {
+    color: #0052CC !important;
     background-color: #f3f0ff !important;
-}
+    t
+} */
 
 /* Form View */
 .form-section, .form-grid {
